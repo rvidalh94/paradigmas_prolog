@@ -1,0 +1,85 @@
+Autoevaluación de requisitos funcionales. (Rodrigo Vidal Huaiquiñir)
+
+Escala de evaluación:
+
+- 0: No realizado.
+- 0.25: Implementación con problemas mayores (funciona 25% de las veces o no funciona)
+- 0.5: Implementación con funcionamiento irregular (funciona 50% de las veces)
+- 0.75: Implementación con problemas menores (funciona 75% de las veces)
+- 1: Implementación completa sin problemas (funciona 100% de las veces)
+
+
+Funciones:
+
+1. Función: (createScene N M E D seed)
+  
+   *Requisito base: Debe emplear recursión natural o de cola. 
+ 
+   Parámetros de entrada: 
+                           N => Largo (Número entero)
+                           M => Ancho (Número entero)
+                           E => Cantida de enemigos iniciales (Número entero)
+                           D => Dificultad del escenario (Número entero)
+                           seed => parámetro para generar valores pseudoaleatorios (Número entero)
+   Parámetros de salida: scene
+
+   Recursión: Recursión de Cola. El motivo de utilizar esta recursión, es porque se hace necesario crear una cantidad considerable de miembros, y para la optimización de recursos, se implementó recursión de cola en las funciones
+              crearListaPersonjesAliados, crearListaPersonjesEnemigos, crearListaObstaculos, las cuales son utilizadas por la función createScene para poder operar.
+
+   Evaluación: 0
+
+
+
+
+2. Función: (checkScene scene)
+
+   *Requisito base: Debe emplear recursión natural o de cola, siendo el estilo de recursión empleado distinto al usado en la función createScene.
+
+   Parámetros de entrada: scene => Escenario (escenario)
+   Parámetros de salida: #t o #f
+
+   Recursión: Recursión lineal. Se utiliza recursión lineal por requisito propio del laboratorio. En primera instancia se utilizó recursión de Cola para lograr un método óptimo, pero ser solicitado utilizar recursión lineal,
+              se decide implementar dicha recursión.
+
+   Evaluación: 0
+
+
+
+3. Función: (play scene member move tf angle seed)
+    
+   *Requisito base: Implementar función de manera currificada y uso de función de orden superior.
+
+   Parámetros de entrada: scene => Escenario actual del juego (Escenario)
+               member => Personaje del equipo que se quiere mover (número entero)
+               move => Cantidad de pasos a realizar por el jugador(member) seleccionado (número entero negativo (mov. izquierda); positivo (mov. derecha))
+               tf => Función que definirá la trayectoria y propiedades físicas que tendrá el proyectil
+               angle => Valor entre -90 y 90 grados (Número entero)
+               seed => parámetro para generar valores pseudoaleatorios (Número entero)
+   Parámetros de salida:
+   
+   Recursión:
+
+   Evaluación: 0
+
+
+
+4. Función: (playLazy scene member move tf t angle seed)
+
+   *Requisito base:  usar evaluación perezosa y función de orden superior. No currificar.
+
+   Parámetros de entrada: scene => Escenario actual del juego (Escenario)
+               member => Personaje del equipo que se quiere mover (número entero)
+               move => Cantidad de pasos a realizar por el jugador(member) seleccionado (número entero negativo (mov. izquierda); positivo (mov. derecha))
+               tf => Función que definirá la trayectoria y propiedades físicas que tendrá el proyectil
+               t => corresponde al tiempo sobre el cual se realizará el cálculo de la posición del proyectil en base a la función tf (los elementos son generados hasta tiempo t)
+               angle => Valor entre -90 y 90 grados (Número entero)
+               seed => parámetro para generar valores pseudoaleatorios (Número entero)
+
+   Parámetros de salida:
+   
+   Recursión:
+
+   Evaluación: 0
+
+                     
+               
