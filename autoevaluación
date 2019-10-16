@@ -11,7 +11,7 @@ Escala de evaluación:
 
 Funciones:
 
-1. Función: (createScene N M E D seed)
+1. Función: createScene(N,M,E,D,Seed,Scene)
   
    *Requisito base: Debe emplear recursión natural o de cola. 
  

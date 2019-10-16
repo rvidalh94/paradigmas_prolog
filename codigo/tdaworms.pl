@@ -1,15 +1,19 @@
 
 % TDA ESCENARIO
 
-escenario(Alto,Ancho,Dificultad,Elementos).
+%% PREDICADO
+escenario(Filas,Columnas,Dificultad,Enemigos,Escenario).
 
+
+%%% HECHOS %%%%
+
+%% LOS ALIADOS SIEMPRE SERÁN 2
 
 % ESCENARIOS DE 5X10 (3)
 
-
 % ESCENARIO DE 2 ALIADOS Y 2 ENEMIGOS
 
-escenario(5, 10, 1,
+escenario(5, 10, 2, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
@@ -19,7 +23,7 @@ escenario(5, 10, 1,
 
 % ESCENARIO DE 2 ALIADOS Y 4 ENEMIGOS
 
-escenario(5, 10, 1,
+escenario(5, 10, 4, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
@@ -29,7 +33,7 @@ escenario(5, 10, 1,
 
 % ESCENARIO DE 2 ALIADOS Y 5 ENEMIGOS
 
-escenario(5, 10, 1,
+escenario(5, 10, 5, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
@@ -41,7 +45,7 @@ escenario(5, 10, 1,
 
 % ESCENARIO DE 2 ALIADOS Y 4 ENEMIGOS
 
-escenario(10, 12, 2,
+escenario(10, 12, 4, 2,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v] , [2,10,v] , [1,9,v] , [1,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v] , [3,10,v] , [1,9,v] , [1,10,v],
@@ -56,7 +60,7 @@ escenario(10, 12, 2,
 
 % ESCENARIO DE 2 ALIADOS Y 6 ENEMIGOS
 
-escenario(10, 12, 2,
+escenario(10, 12, 6, 2,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v] , [2,10,v] , [1,9,v] , [1,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v] , [3,10,v] , [1,9,v] , [1,10,v],
@@ -73,7 +77,7 @@ escenario(10, 12, 2,
 
 % ESCENARIO DE 2 ALIADOS Y 8 ENEMIGOS
 
-escenario(20, 20, 3,
+escenario(20, 20, 8, 3,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v] , [2,10,v] , [1,9,v] , [1,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v] , [3,10,v] , [1,9,v] , [1,10,v],
@@ -93,17 +97,19 @@ escenario(20, 20, 3,
      [17,1,v] ,[17,2,v] ,[17,3,v] ,[17,4,v] ,[17,5,v] ,[17,6,v] ,[17,7,v] ,[17,8,v] ,[17,9,v] ,[17,10,v] ,[17,9,v] ,[17,10,v],
      [18,1,v] ,[18,2,v] ,[18,3,v] ,[18,4,v] ,[18,5,v] ,[18,6,v] ,[18,7,v] ,[18,8,e] ,[18,9,v] ,[18,10,v] ,[18,9,v] ,[18,10,v],
      [19,1,v] ,[19,2,v] ,[19,3,v] ,[19,4,v] ,[19,5,v] ,[19,6,v] ,[19,7,e] ,[19,8,v] ,[19,9,e], [19,10,v] ,[19,9,e] ,[19,10,v],
-     [20,1,a] ,[20,2,a] ,[20,3,v] ,[20,4,v] ,[20,5,v] ,[20,6,e] ,[20,7,v] ,[20,8,e] ,[20,9,v], [20,10,e] ,[20,9,v] ,[20,10,e]).
+     [20,1,a] ,[20,2,a] ,[20,3,v] ,[20,4,v] ,[20,5,v] ,[20,6,e] ,[20,7,v] ,[20,8,e] ,[20,9,v], [20,10,e] ,[20,9,v] ,[20,10,e]]).
 
 
 
+%%
 
-% CREATESCENE
+%%% CREATESCENE
 
 
+% Predicado que valida si es posible posicionar la cantidad de miembros totales en un escenario NxM, en donde a la cantidad de enemigos 'E', se suman 2, los que corresponden a los aliados.
+% Si es posible que en un escenario NxM quepan la cantidad totales de miembros, se consultan los escenarios que cumplan los con los criterios dados.
 
 createScene(N,M,E,D,Seed,Scene).
-
-createScene(N,M,E,D,Seed,Scene):- (N*M) >= (E+2), escenario(N,M,D,_).
+createScene(N,M,E,D,Seed,Scene):- (N*M) >= (E+2), escenario(N,M,E,D,Scene).
 
 
