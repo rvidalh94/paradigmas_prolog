@@ -2,7 +2,7 @@
 % TDA ESCENARIO
 
 %% PREDICADO
-escenario(Filas,Columnas,Dificultad,Enemigos,Escenario).
+%escenario(F,C,E,D,B).
 
 
 %%% HECHOS %%%%
@@ -11,39 +11,39 @@ escenario(Filas,Columnas,Dificultad,Enemigos,Escenario).
 
 % ESCENARIOS DE 5X10 (3)
 
-% ESCENARIO DE 2 ALIADOS Y 2 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 2 ENEMIGOS
 
 escenario(5, 10, 2, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
       [4,1,v] , [4,2,v] , [4,3,v] , [4,4,v] , [4,5,v] , [4,6,v] , [4,7,v] , [4,8,v] , [4,9,v], [4,10,v],
-      [5,1,a] , [5,2,a] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
+      [5,1,j] , [5,2,v] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
 
 
-% ESCENARIO DE 2 ALIADOS Y 4 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 4 ENEMIGOS
 
 escenario(5, 10, 4, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
       [4,1,v] , [4,2,v] , [4,3,v] , [4,4,v] , [4,5,v] , [4,6,v] , [4,7,v] , [4,8,e] , [4,9,v], [4,10,e],
-      [5,1,a] , [5,2,a] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
+      [5,1,j] , [5,2,v] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
 
 
-% ESCENARIO DE 2 ALIADOS Y 5 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 5 ENEMIGOS
 
 escenario(5, 10, 5, 1,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v], [1,10,v],
       [2,1,v] , [2,2,v] , [2,3,v] , [2,4,v] , [2,5,v] , [2,6,v] , [2,7,v] , [2,8,v] , [2,9,v], [2,10,v],
       [3,1,v] , [3,2,v] , [3,3,v] , [3,4,v] , [3,5,v] , [3,6,v] , [3,7,v] , [3,8,v] , [3,9,v], [3,10,v],
       [4,1,v] , [4,2,v] , [4,3,v] , [4,4,v] , [4,5,v] , [4,6,e] , [4,7,v] , [4,8,e] , [4,9,v], [4,10,e],
-      [5,1,a] , [5,2,a] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
+      [5,1,j] , [5,2,v] , [5,3,v] , [5,4,v] , [5,5,v] , [5,6,v] , [5,7,e] , [5,8,v] , [5,9,e], [5,10,v]]).
 
 
 % ESCENARIOS DE 10X12 (2)
 
-% ESCENARIO DE 2 ALIADOS Y 4 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 4 ENEMIGOS
 
 escenario(10, 12, 4, 2,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
@@ -55,10 +55,10 @@ escenario(10, 12, 4, 2,
       [7,1,v] , [7,2,v] , [7,3,v] , [7,4,v] , [7,5,v] , [7,6,v] , [7,7,v] , [7,8,v] , [7,9,v] , [7,10,v] , [7,9,v] , [7,10,v],
       [8,1,v] , [8,2,v] , [8,3,v] , [8,4,v] , [8,5,v] , [8,6,v] , [8,7,v] , [8,8,v] , [8,9,v] , [8,10,v] , [8,9,v] , [8,10,v],
       [9,1,v] , [9,2,v] , [9,3,v] , [9,4,v] , [9,5,v] , [9,6,v] , [9,7,e] , [9,8,v] , [9,9,v] , [9,10,v] , [9,9,v] , [9,10,v],
-     [10,1,a] ,[10,2,a] ,[10,3,v] ,[10,4,v] ,[10,5,v] ,[10,6,e] ,[10,7,v] ,[10,8,v] ,[10,9,e] ,[10,10,v] ,[10,9,e] ,[10,10,v]]).
+     [10,1,j] ,[10,2,v] ,[10,3,v] ,[10,4,v] ,[10,5,v] ,[10,6,e] ,[10,7,v] ,[10,8,v] ,[10,9,e] ,[10,10,v] ,[10,9,e] ,[10,10,v]]).
 
 
-% ESCENARIO DE 2 ALIADOS Y 6 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 6 ENEMIGOS
 
 escenario(10, 12, 6, 2,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
@@ -70,12 +70,12 @@ escenario(10, 12, 6, 2,
       [7,1,v] , [7,2,v] , [7,3,v] , [7,4,v] , [7,5,v] , [7,6,v] , [7,7,v] , [7,8,v] , [7,9,v] , [7,10,v] , [7,9,v] , [7,10,v],
       [8,1,v] , [8,2,v] , [8,3,v] , [8,4,v] , [8,5,v] , [8,6,v] , [8,7,v] , [8,8,v] , [8,9,v] , [8,10,v] , [8,9,v] , [8,10,v],
       [9,1,v] , [9,2,v] , [9,3,v] , [9,4,v] , [9,5,v] , [9,6,v] , [9,7,e] , [9,8,v] , [9,9,v] , [9,10,e] , [9,9,v] , [9,10,v],
-     [10,1,a] ,[10,2,a] ,[10,3,v] ,[10,4,v] ,[10,5,v] ,[10,6,v] ,[10,7,v] ,[10,8,e] ,[10,9,e] ,[10,10,v] ,[10,9,e] ,[10,10,e]]).
+     [10,1,j] ,[10,2,v] ,[10,3,v] ,[10,4,v] ,[10,5,v] ,[10,6,v] ,[10,7,v] ,[10,8,e] ,[10,9,e] ,[10,10,v] ,[10,9,e] ,[10,10,e]]).
 
 
 % ESCENARIO DE 20X20 (1)
 
-% ESCENARIO DE 2 ALIADOS Y 8 ENEMIGOS
+% ESCENARIO DE 1 JUGADOR Y 8 ENEMIGOS
 
 escenario(20, 20, 8, 3,
      [[1,1,v] , [1,2,v] , [1,3,v] , [1,4,v] , [1,5,v] , [1,6,v] , [1,7,v] , [1,8,v] , [1,9,v] , [1,10,v] , [1,9,v] , [1,10,v],
@@ -97,7 +97,7 @@ escenario(20, 20, 8, 3,
      [17,1,v] ,[17,2,v] ,[17,3,v] ,[17,4,v] ,[17,5,v] ,[17,6,v] ,[17,7,v] ,[17,8,v] ,[17,9,v] ,[17,10,v] ,[17,9,v] ,[17,10,v],
      [18,1,v] ,[18,2,v] ,[18,3,v] ,[18,4,v] ,[18,5,v] ,[18,6,v] ,[18,7,v] ,[18,8,e] ,[18,9,v] ,[18,10,v] ,[18,9,v] ,[18,10,v],
      [19,1,v] ,[19,2,v] ,[19,3,v] ,[19,4,v] ,[19,5,v] ,[19,6,v] ,[19,7,e] ,[19,8,v] ,[19,9,e], [19,10,v] ,[19,9,e] ,[19,10,v],
-     [20,1,a] ,[20,2,a] ,[20,3,v] ,[20,4,v] ,[20,5,v] ,[20,6,e] ,[20,7,v] ,[20,8,e] ,[20,9,v], [20,10,e] ,[20,9,v] ,[20,10,e]]).
+     [20,1,j] ,[20,2,v] ,[20,3,v] ,[20,4,v] ,[20,5,v] ,[20,6,e] ,[20,7,v] ,[20,8,e] ,[20,9,v], [20,10,e] ,[20,9,v] ,[20,10,e]]).
 
 
 
@@ -109,7 +109,21 @@ escenario(20, 20, 8, 3,
 % Predicado que valida si es posible posicionar la cantidad de miembros totales en un escenario NxM, en donde a la cantidad de enemigos 'E', se suman 2, los que corresponden a los aliados.
 % Si es posible que en un escenario NxM quepan la cantidad totales de miembros, se consultan los escenarios que cumplan los con los criterios dados.
 
+
 createScene(N,M,E,D,Seed,Scene).
-createScene(N,M,E,D,Seed,Scene):- (N*M) >= (E+2), escenario(N,M,E,D,Scene).
+createScene(N,M,E,D,Seed,Scene):-  (N*M >= E+2),
+                                   escenario(N,M,E,D,B),
+                                   Scene = [N,M,E,D|[B]].
 
 
+darX([Ca|L],Ca).
+darY([Ca,Cb|L],Cb).
+darB([Ca,Cb,Cc|L],Cc).
+
+checkScene(Scene).
+checkScene(Scene):- darX(Scene,X). 
+				    %integer(M), 
+				    %integer(E), 
+				    %integer(D),
+				    %integer(Seed)),
+                    %(N>0,M>0,E>0,D>0).
