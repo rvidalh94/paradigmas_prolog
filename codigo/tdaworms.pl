@@ -110,20 +110,56 @@ escenario(20, 20, 8, 3,
 % Si es posible que en un escenario NxM quepan la cantidad totales de miembros, se consultan los escenarios que cumplan los con los criterios dados.
 
 
-createScene(N,M,E,D,Seed,Scene).
-createScene(N,M,E,D,Seed,Scene):-  (N*M >= E+2),
+%createScene(N,M,E,D,Seed,Scene).
+createScene(N,M,E,D,Seed,Scene):-  (integer(N),integer(M),integer(E),integer(D),integer(Seed)),
+								   (N*M >= E+2),
                                    escenario(N,M,E,D,B),
                                    Scene = [N,M,E,D|[B]].
 
 
-darX([Ca|L],Ca).
-darY([Ca,Cb|L],Cb).
-darB([Ca,Cb,Cc|L],Cc).
 
-checkScene(Scene).
-checkScene(Scene):- darX(Scene,X). 
-				    %integer(M), 
+cabezaLista([H|_],H).
+cuerpoLista([_|T],T).
+
+
+%% filas
+
+darN(Scene,X):-cabezaLista(Scene,X).
+
+
+%% columnas
+darM(Scene,Y):- cuerpoLista(Scene, T), cabezaLista(T,Y).
+
+
+%% board
+darBoard(Scene,B):-cuerpoLista(Scene,X1),
+                   cuerpoLista(X1, X2),
+                   cuerpoLista(X2, X3),
+                   cuerpoLista(X3, X4),
+                   cabezaLista(X4,B).
+
+duplicados(List):-
+ append(X,Y,List),
+ member(M,X),
+ member(M,Y).
+
+
+%checkScene(Scene).
+checkScene(Scene):- darN(Scene,X), integer(X), X > 0, 
+				    darM(Scene,Y), integer(Y), Y > 0,
+				    darBoard(Scene,B),
+				    duplicados(B).
 				    %integer(E), 
 				    %integer(D),
 				    %integer(Seed)),
                     %(N>0,M>0,E>0,D>0).
+
+
+
+%count(_, [], 0).
+%count(X, [X|T], N) :- !,
+%						count(X, T, N1),
+%						N is N1 + 1.
+
+%count(X, [_|T], N) :- count(X, T, N).
+
