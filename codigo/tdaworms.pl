@@ -116,50 +116,51 @@ createScene(N,M,E,D,Seed,Scene):-  (integer(N),integer(M),integer(E),integer(D),
                                    escenario(N,M,E,D,B),
                                    Scene = [N,M,E,D|[B]].
 
-
+%% funciones para obtener cabeza y cola de una lista
 
 cabezaLista([H|_],H).
 cuerpoLista([_|T],T).
 
 
-%% filas
+%% obtener el número de filas del escenario
 
 darN(Scene,X):-cabezaLista(Scene,X).
 
 
-%% columnas
+%% obtener el número de columnas del escenario
 darM(Scene,Y):- cuerpoLista(Scene, T), cabezaLista(T,Y).
 
+%% obtener el número de enemigos del escenario
+darEnemigos(Scene,E):-cuerpoLista(Scene,X1),
+					  cuerpoLista(X1,X2),
+					  cabezaLista(X2,E).
 
-%% board
+%% obtener la dificultad del escenario
+darDificultad(Scene,D):-cuerpoLista(Scene,X1),
+					  cuerpoLista(X1,X2),
+					  cuerpoLista(X2,X3),
+					  cabezaLista(X3,D).
+
+%% obtener la lista de elementos del escenario
 darBoard(Scene,B):-cuerpoLista(Scene,X1),
                    cuerpoLista(X1, X2),
                    cuerpoLista(X2, X3),
                    cuerpoLista(X3, X4),
                    cabezaLista(X4,B).
 
-duplicados(List):-
- append(X,Y,List),
- member(M,X),
- member(M,Y).
+
+
+count(_, [], 0).
+count(X, [X|T], N) :- !,
+						count(X, T, N1),
+						N is N1 + 1.
+count(X, [_|T], N) :- count(X, T, N).
+
+
+duplicates(H,B):- member(H,B), duplicates(cabezaLista(B),cuerpoLista(B)).
 
 
 %checkScene(Scene).
 checkScene(Scene):- darN(Scene,X), integer(X), X > 0, 
 				    darM(Scene,Y), integer(Y), Y > 0,
-				    darBoard(Scene,B),
-				    duplicados(B).
-				    %integer(E), 
-				    %integer(D),
-				    %integer(Seed)),
-                    %(N>0,M>0,E>0,D>0).
-
-
-
-%count(_, [], 0).
-%count(X, [X|T], N) :- !,
-%						count(X, T, N1),
-%						N is N1 + 1.
-
-%count(X, [_|T], N) :- count(X, T, N).
-
+				    darEnemigos(Scene,E), integer(E).
